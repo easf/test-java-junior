@@ -1,4 +1,4 @@
-package automoviles;
+package com.junior.automoviles;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -81,7 +81,7 @@ public class Administrador {
 		while (true){
 			System.out.println("Ingrese numero de chasis: ");	
 			try{
-				String ch = br.readLine();
+				String ch = br.readLine().toUpperCase();
 				int n = 0;
 				for (Automovil auto : this.list) {
 					if (auto.getNumeroDeChasis().equals(ch)){

@@ -1,4 +1,4 @@
-package automoviles;
+package com.junior.automoviles;
 
 public class Automovil {
 

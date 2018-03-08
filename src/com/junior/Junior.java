@@ -3,8 +3,8 @@ package com.junior;
 import java.io.IOException;
 import java.util.List;
 
-import automoviles.Administrador;
-import automoviles.Automovil;
+import com.junior.automoviles.Administrador;
+import com.junior.automoviles.Automovil;
 
 
 public class Junior {
