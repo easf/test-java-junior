@@ -33,7 +33,7 @@ public class Automovil {
 	
 	public void prenderse() {
 		if (! this.prendido){
-			System.out.println("\nPrendiendose... Prendido\n"); this.prendido = true;
+			System.out.println("\nPrendiéndose... Prendido\n"); this.prendido = true;
 		} else {
 			System.out.println("\nEl auto ya estaba prendido\n");
 		}
@@ -41,7 +41,7 @@ public class Automovil {
 	
 	public void apagarse() {
 		if (this.prendido){
-			System.out.println("\nApagandose... Apagado\n"); this.prendido = false;
+			System.out.println("\nApagándose... Apagado\n"); this.prendido = false;
 		}else{
 			System.out.println("\nEl auto ya estaba apagado\n");
 		}

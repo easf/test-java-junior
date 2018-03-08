@@ -10,8 +10,11 @@ import java.util.List;
 
 public class Administrador {
 	
-	List<Automovil> list = new ArrayList<Automovil>();
+	private List<Automovil> list = new ArrayList<Automovil>();
 	
+	private static String mensajeNumeroInvalido = "\nNúmero inválido, ingrese uno válido\n";
+	private static String mensajeValorInvalido = "\nValor inválido, ingrese un valor adecuado\n";
+	 
 	public Administrador(List<Automovil> list){
 		this.list = list;
 	}
@@ -23,10 +26,10 @@ public class Administrador {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		while(true){
         	System.out.print( "\nOpciones\n"
-					+ "1- Listar autos, mostrando su marca, color, nro de chasis y si es deportivo\n"
-					+ "2- Seleccionar auto por medio de su nro de chasis\n"
+					+ "1- Listar autos, mostrando su marca, color, número de chasis y si es deportivo\n"
+					+ "2- Seleccionar auto por medio de su número de chasis\n"
 					+ "3- Finalizar programa\n"
-					+ "Ingrese el numero de la opcion elegida: ");
+					+ "Ingrese el número de la opción elegida: ");
 			try{
 	            int op = Integer.parseInt(br.readLine());
 	            
@@ -41,12 +44,12 @@ public class Administrador {
 					this.usarAutoSeleccionado(autoSeleccionado);
 					break;
 				default:
-					System.err.println("\nNúmero invalido, ingrese uno válido\n");
+					System.err.println(mensajeNumeroInvalido);
 					break;
 				}
 	            
 	        }catch(NumberFormatException nfe){
-	            System.err.println("\nValor invalido, ingrese un valor adecuado\n");
+	            System.err.println(mensajeValorInvalido);
 	        }
 		}	
 	}
@@ -79,7 +82,7 @@ public class Administrador {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		while (true){
-			System.out.println("Ingrese numero de chasis: ");	
+			System.out.println("Ingrese número de chasis: ");	
 			try{
 				String ch = br.readLine().toUpperCase();
 				int n = 0;
@@ -99,7 +102,7 @@ public class Administrador {
 				}
 				
 				if(autoSel.equals(null)){ 
-					System.out.println("\nEl numero de chasis es incorrecto, vuelva a intentarlo\n"); 
+					System.out.println("\nEl número de chasis es incorrecto, vuelva a intentarlo\n"); 
 					continue;
 				}
 				else{
@@ -125,7 +128,7 @@ public class Administrador {
 					+ "3- frenar\n"
 					+ "4- apagarlo\n"
 					+ "5- dejarlo\n" 
-					+ "Ingrese el numero de la accion elegida: ");	
+					+ "Ingrese el número de la acción elegida: ");	
 			try{
 				int acc = Integer.parseInt(br.readLine());
 				
@@ -145,11 +148,11 @@ public class Administrador {
 					auto.apagarse();
 					break;
 				default:
-					System.err.println("\nNúmero invalido, ingrese uno válido\n");
+					System.err.println(mensajeNumeroInvalido);
 					break;
 				}
 			}catch (NumberFormatException e) {
-				System.err.println("\nValor invalido, ingrese un valor adecuado\n");
+				System.err.println(mensajeValorInvalido);
 			}
 		}
 	}
@@ -161,7 +164,7 @@ public class Administrador {
 	 * **/
 	
 	// enum de la cabecera del archivo
-	public enum c { AUTO, COLOR, PUERTAS, RUEDAS, KM, CHASIS, MARCA, DEPOR, SEG } 
+	private enum c { AUTO, COLOR, PUERTAS, RUEDAS, KM, CHASIS, MARCA, DEPOR, SEG } 
 	
 	public static List<Automovil> parseFile(String fileName) throws IOException{
 		List<Automovil> list = new ArrayList<Automovil>();
