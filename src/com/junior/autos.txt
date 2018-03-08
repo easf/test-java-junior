@@ -1,0 +1,12 @@
+auto,color,puertas,ruedas,kilometraje,numeroDeChasis,marca,deportivo,segundos
+0,verde marciano,4,5,23401,AAT1,toyota,no,null
+1,rojo potente,2,4,120030,AAF1,ferrari,si,5
+2,naranja,2,4,3037,AAA1,audi,si,9
+3,azul,2,4,1037,AAA2,audi,si,10
+4,negro,2,4,192929,AAL1,lamborghini,si,3
+5,violeta,4,4,43401,AAN1,nissan,no,null
+6,plata,4,5,43401,AAM1,mazda,no,null
+7,blanco,4,4,5401,AAR1,alfa y romeo,no,null
+8,verde atomico,4,4,2201,AFI1,fiat,no,null
+9,morado,4,4,3201,AAV1,volkswagen,no,null
+10,dorado,2,4,3201,AAH1,honda,si,9
